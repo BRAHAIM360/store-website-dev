@@ -1,0 +1,24 @@
+{
+  glasses(where: { _id: "5da6f21e7bd27000a8fdefee" }) {
+    name
+    price
+    code
+    brand {
+      name
+    }
+    images {
+      image {
+        url
+      }
+    }
+    categories {
+      name
+    }
+    lenses {
+      name
+    }
+    shapes {
+      name
+    }
+  }
+}

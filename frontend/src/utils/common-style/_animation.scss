@@ -1,0 +1,73 @@
+.fade-enter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY($transition-vertical-distance);
+}
+
+.fade-enter.fade-enter-active {
+  animation: change-to-initial $animation-duration steps(4, end) forwards;
+  z-index: -1;
+  opacity: 1;
+  transform: translateY(0);
+  transition-property: transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: $animation-duration / 2;
+  transition-delay: $animation-duration / 2;
+}
+
+.fade-exit {
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit.fade-exit-active {
+  animation: change-to-fixed $animation-duration steps(4, end) forwards;
+  opacity: 0;
+  transform: translateY($transition-vertical-distance);
+  transition-property: transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: $animation-duration / 2;
+}
+
+// @bug: animating non-animatable props doesn't work on Safari.
+@keyframes change-to-initial {
+  form {
+      position: fixed;
+  }
+  to {
+      position: static;
+  }
+}
+
+@keyframes change-to-fixed {
+  form {
+      position: static;
+  }
+  to {
+      position: fixed;
+  }
+}
+
+.fade-fb {
+  opacity: 0;
+  animation: fade-from-bottom-animation $animation-duration/2 ease-in forwards;
+}
+
+.fade-fb.bubble {
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+
+@keyframes fade-from-bottom-animation {
+  0% {
+      transform: translateY($transition-vertical-distance);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}

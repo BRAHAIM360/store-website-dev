@@ -1,0 +1,86 @@
+@import "../../../../../utils/common-style/variables";
+@import "../../../../../utils/common-style/animation";
+@import "../../../../../utils/common-style/buttons";
+
+.landing {
+  .collections {
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: $white-color;
+    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.1), 0 3px 3px rgba(59, 64, 69, 0.1);
+
+    .tabs {
+      a {
+        display: inline-block;
+        margin: 0.4rem 0rem;
+        font-size: large;
+        padding: 0.8rem 1rem;
+        transition: 0.2s ease-in-out;
+        transition-property: color, background-color, border-color;
+        border-top: 4px solid transparent;
+        cursor: pointer;
+      }
+      a:hover {
+        border-top: 4px solid rgba($color: $primary-color, $alpha: 0.2);
+      }
+
+      a.selected {
+        border-top: 4px solid $primary-color;
+      }
+    }
+
+    $card-width: 280px;
+
+    .collection {
+      padding-bottom: 1px;
+      padding-right: 1px;
+      > a {
+        @extend .fade-fb;
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: $card-width;
+        height: $card-width;
+        @media screen and (max-width: $regular) {
+          width: $card-width * 3/5;
+          height: $card-width * 3/5;
+        }
+        @media screen and (max-width: $medium) {
+          width: $card-width/2;
+          height: $card-width/2;
+        }
+        display: inline-block;
+        box-sizing: content-box;
+        margin-bottom: -1px;
+        margin-right: -1px;
+        border: 1px solid #d8d1ca;
+        transition: 0.5s ease;
+        transition-property: box-shadow;
+        text-align: left;
+      }
+      > a:hover {
+        box-shadow: 0 0 15px 5px rgba($color: #d8d1ca, $alpha: 0.7);
+      }
+      > a > a {
+        display: inline-block;
+        margin: 1rem;
+        font-size: large;
+        font-weight: bold;
+        color: #877874;
+      }
+    }
+
+    .see-more {
+      @extend .btn-hollow;
+      font-size: large;
+      display: inline-block;
+      min-width: 240px;
+      margin: 2rem 1rem 1rem;
+      .icon {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

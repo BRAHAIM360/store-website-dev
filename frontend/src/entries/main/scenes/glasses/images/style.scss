@@ -1,0 +1,33 @@
+@import "../../../../../utils/common-style/variables";
+
+$images-width: 320px;
+
+.glasses {
+  .imagesList {
+    margin: 1rem auto;
+    width: 100%;
+    display: inline-block;
+    .preview {
+      height: 30vw;
+      background-color: $white-color;
+      .magnifier {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img {
+        pointer-events: all !important;
+        object-fit: contain;
+      }
+    }
+    @media screen and (max-width: $medium) {
+      width: 90vw;
+    }
+    @media screen and (max-width: $regular) {
+      .preview {
+        height: 90vw;
+      }
+    }
+  }
+}

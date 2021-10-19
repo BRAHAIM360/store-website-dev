@@ -1,0 +1,11 @@
+{
+  lenses {
+    name: name_fr
+  }
+  shapes {
+    name: name_fr
+  }
+  brands {
+    name
+  }
+}

@@ -1,0 +1,132 @@
+@import "../../../../../utils/common-style/variables";
+@import "../../../../../utils/common-style/animation";
+@import "../../../../../utils/common-style/buttons";
+
+.catalog {
+  text-align: center;
+  .catalog {
+    text-align: left;
+    tr {
+      vertical-align: top;
+      td:nth-child(2) {
+        width: 100%;
+      }
+    }
+    $column-width: 200px;
+
+    .sort-by > div {
+      > * {
+        padding: 1rem;
+        margin: 0 1rem;
+      }
+      > span {
+        float: right;
+      }
+      > button {
+        float: left;
+      }
+    }
+    .filters {
+      > div:nth-child(1) {
+        width: $column-width;
+        margin: 1rem 2rem;
+        .title {
+          font-size: large;
+        }
+        .content {
+          border-bottom: 1px solid #d8d8d8;
+          padding-bottom: 2rem;
+          margin-bottom: 2rem;
+          padding-top: 1rem;
+          .checkbox {
+            label {
+              padding: 0.8rem 3rem;
+            }
+            label::before {
+              border-radius: 50%;
+              width: 1.75rem;
+              height: 1.75rem;
+              margin: 0.5rem 0.3rem;
+            }
+            label::after {
+              width: 1.75rem;
+              height: 1.75rem;
+              background: $primary-color;
+              color: $white-color !important;
+              margin: 0.5rem 0.3rem;
+              padding-top: 0.3rem;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+    $card-width: 280px;
+    .results {
+      > div {
+        text-align: center;
+        margin: 1rem;
+        min-height: 50vh;
+        > a {
+          @extend .fade-fb;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: $card-width * 3/5;
+          height: $card-width * 3/5;
+          display: inline-block;
+          box-sizing: content-box;
+          margin-bottom: -1px;
+          margin-right: -1px;
+          border: 1px solid #d8d1ca;
+          transition: 0.5s ease;
+          transition-property: box-shadow;
+          text-align: left;
+        }
+        > a:hover {
+          box-shadow: 0 0 15px 5px rgba($color: #d8d1ca, $alpha: 0.7);
+        }
+        > a > a {
+          display: inline-block;
+          margin: 1rem;
+          font-size: medium;
+          font-weight: bold;
+          color: #877874;
+        }
+      }
+    }
+    .pagination {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .sidebar-filter {
+      position: absolute;
+      display: none;
+    }
+    button.filter {
+      display: none;
+    }
+    @media screen and (max-width: $regular) {
+      .search,
+      .inline-filter {
+        display: none;
+      }
+      button.filter {
+        display: block;
+      }
+      .sidebar-filter {
+        display: table-cell;
+      }
+      .results {
+        > div {
+          width: 100vw;
+          margin: 1rem 0;
+          > a {
+            width: $card-width / 2;
+            height: $card-width / 2;
+          }
+        }
+      }
+    }
+  }
+}

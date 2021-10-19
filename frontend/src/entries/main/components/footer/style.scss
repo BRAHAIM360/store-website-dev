@@ -1,0 +1,56 @@
+@import "../../../../utils/common-style/variables";
+
+.footer {
+  .row:nth-child(1) {
+    background: lighten($black-color, 20);
+    .column {
+      padding: 2rem !important;
+      margin-top: 3rem !important;
+      margin-bottom: 3rem !important;
+      min-width: 300px;
+      .header {
+        color: $white-color;
+        margin: 1rem 0;
+        font-weight: bolder;
+      }
+      .divider {
+        height: 3px;
+        width: 60px;
+        background: $primary-color;
+      }
+      p {
+        color: $white-color;
+        text-align: justify;
+        margin: 1rem 0;
+      }
+      ul {
+        text-align: left;
+        padding: 0;
+        li {
+          list-style: none;
+          margin: 1rem 0;
+          a {
+            color: $white-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .column:nth-child(1) {
+      min-width: 300px;
+    }
+  }
+  .row:nth-child(2) {
+    background: rgba($black-color, 0.9);
+    .column {
+      text-align: center !important;
+      padding: 1rem 0 !important;
+      p {
+        color: rgba($white-color, 0.5);
+        a {
+          color: $white-color;
+        }
+      }
+    }
+  }
+}

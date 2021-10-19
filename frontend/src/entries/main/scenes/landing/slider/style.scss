@@ -1,0 +1,12 @@
+@import "../../../../../utils/common-style/variables";
+
+.landing {
+  .slider {
+    margin-top: -$navbarHeight;
+    .slide {
+      height: 100ch;
+      object-fit: cover !important;
+      object-position: center;
+    }
+  }
+}

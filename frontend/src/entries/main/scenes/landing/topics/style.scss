@@ -1,0 +1,61 @@
+@import "../../../../../utils/common-style/variables";
+@import "../../../../../utils/common-style/buttons";
+
+.landing {
+  .topics {
+    background: $white-color;
+    position: relative;
+    z-index: 1;
+    .topic {
+      text-align: left;
+      color: $white-color;
+      height: 60vh;
+      margin: 1rem;
+      background-size: cover;
+      background-position: center;
+      vertical-align: bottom;
+      > div {
+        height: 100%;
+        background: rgba($black-color, 0.3);
+        position: relative;
+        > div {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          max-width: 80%;
+          .title {
+            display: inline-block;
+            margin: 1rem;
+            font-size: xx-large;
+            font-weight: bold;
+            text-shadow: 0 0 2px $black-color;
+            line-height: normal;
+          }
+          .line {
+            height: 4px;
+            width: 60px;
+            margin: 1rem;
+            background: rgba($color: $primary-color, $alpha: 0.5);
+            box-shadow: 0 0 2px rgba($color: $black-color, $alpha: 0.4);
+          }
+          .description {
+            display: inline-block;
+            margin: 1rem;
+            font-size: large;
+            font-weight: bold;
+            text-shadow: 0 0 2px $black-color;
+          }
+          .action {
+            @extend .btn-hollow;
+            border-color: rgba($color: $white-color, $alpha: 0.6);
+            color: $white-color;
+            background: rgba($color: $black-color, $alpha: 0.2);
+            border-width: 2px;
+            font-weight: bold;
+            text-shadow: 0 0 2px rgba($color: $black-color, $alpha: 0.5);
+          }
+        }
+      }
+    }
+  }
+}

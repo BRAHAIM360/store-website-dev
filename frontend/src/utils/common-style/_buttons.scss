@@ -1,0 +1,22 @@
+@import "./variables";
+
+.btn {
+  color: $black-color;
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color, border-color;
+  display: inline-block;
+}
+
+.btn-hollow {
+  @extend .btn;
+  background: transparent;
+  border: 1px solid $black-color;
+  margin: 0.8rem 1rem;
+  padding: 0.8rem 1rem;
+}
+
+.btn-hollow:hover {
+  background: $secondary-color;
+  color: $primary-color;
+  border-color: $primary-color;
+}

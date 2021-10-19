@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "images",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_images",
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

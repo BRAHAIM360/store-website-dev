@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shapes",
+      "handler": "Shape.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shapes/count",
+      "handler": "Shape.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shapes/:id",
+      "handler": "Shape.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/shapes",
+      "handler": "Shape.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shapes/:id",
+      "handler": "Shape.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shapes/:id",
+      "handler": "Shape.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy
+
+build:frontend:
+  stage: build
+  image: node:10
+  artifacts:
+    paths:
+      - fallback_server/static_files/w/bundles
+  before_script:
+    - cd frontend
+    - yarn
+  script:
+    - yarn compile
+  only:
+    - master
+
+deploy:staging_to_heroku:
+  stage: deploy
+  image: node:10
+  script:
+    - git remote add heroku https://heroku:$HEROKU_TOKEN@git.heroku.com/$HEROKU_REPO_NAME.git
+    - git push heroku HEAD:master --force
+  only:
+    - staging

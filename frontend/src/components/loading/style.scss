@@ -1,0 +1,24 @@
+.loading-component {
+  background-image: url(/w/svg/logo_flat.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 420px;
+  opacity: 0;
+  animation: loading-logo 2s ease-out .2s infinite;
+}
+
+@keyframes loading-logo {
+  from {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

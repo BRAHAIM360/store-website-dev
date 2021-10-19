@@ -1,0 +1,29 @@
+{
+  slides {
+    image {
+      url
+    }
+  }
+  topics {
+    title: title_fr
+    description : description_fr
+    actionText: actionText_fr
+    actionLink
+    image {
+      url
+    }
+  }
+  collections {
+    title:title_fr
+    glasses {
+      id
+      name
+      brand {
+        name
+      }
+      thumbnail {
+        url
+      }
+    }
+  }
+}

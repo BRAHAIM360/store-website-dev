@@ -1,0 +1,23 @@
+@import "../../../../../utils/common-style/variables";
+
+.landing {
+  .about-us {
+    padding: 1rem !important;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: $white-color;
+    box-shadow: 0 -1px 0 rgba(12, 13, 14, 0.1), 0 -3px 3px rgba(59, 64, 69, 0.1);
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    h1 {
+      font-family: inherit;
+    }
+    .detail {
+      padding: 6rem 2rem !important;
+      p {
+        font-size: medium;
+        text-align: justify;
+      }
+    }
+  }
+}

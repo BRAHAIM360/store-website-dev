@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/glasses",
+      "handler": "Glasses.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/glasses/count",
+      "handler": "Glasses.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/glasses/:id",
+      "handler": "Glasses.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/glasses",
+      "handler": "Glasses.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/glasses/:id",
+      "handler": "Glasses.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/glasses/:id",
+      "handler": "Glasses.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

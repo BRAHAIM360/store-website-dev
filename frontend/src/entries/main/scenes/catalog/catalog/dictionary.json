@@ -1,0 +1,14 @@
+{
+  "en": {
+    "Category": "Category",
+    "Shape": "Shapes",
+    "Brand": "Brand",
+    "Lense": "Lenses"
+  },
+  "fr": {
+    "Category": "Catégorie",
+    "Shape": "Forme",
+    "Brand": "Marque",
+    "Lense": "Lentille"
+  }
+}

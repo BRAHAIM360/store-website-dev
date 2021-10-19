@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lenses",
+      "handler": "Lense.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lenses/count",
+      "handler": "Lense.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lenses/:id",
+      "handler": "Lense.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lenses",
+      "handler": "Lense.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lenses/:id",
+      "handler": "Lense.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lenses/:id",
+      "handler": "Lense.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

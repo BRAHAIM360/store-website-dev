@@ -1,0 +1,17 @@
+{
+  "*": {
+    "default language code": "en",
+    "language english": "English",
+    "language french": "Français"
+  },
+  "en": {
+    "language code": "en",
+    "en": "English",
+    "fr": "French"
+  },
+  "fr": {
+    "language code": "fr",
+    "en": "Anglais",
+    "fr": "Français"
+  }
+}

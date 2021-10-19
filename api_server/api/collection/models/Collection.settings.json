@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "collection",
+  "info": {
+    "name": "collection",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "title_fr": {
+      "required": true,
+      "type": "string"
+    },
+    "glasses": {
+      "collection": "glasses"
+    }
+  }
+}

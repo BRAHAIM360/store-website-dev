@@ -1,0 +1,107 @@
+@import "../../../../utils/common-style/variables";
+
+$ratio: 0.6;
+$text-color: darken($primary-color, 10);
+$text-shadow: 0 1px 1px $white-color;
+
+.navbar {
+  background: $white-color;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.48627);
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.1), 0 3px 3px rgba(59, 64, 69, 0.1);
+
+  .logo {
+    width: 100%;
+    height: $ratio * $navbarHeight;
+    a {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: $ratio * $navbarHeight;
+      width: $ratio * $navbarHeight * 5/4;
+      background-image: url(/w/svg/logo.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .navButtonIcon {
+    padding: 0.3rem 1rem !important;
+    .icon {
+      color: $primary-color;
+    }
+  }
+  .navButton {
+    div {
+      text-shadow: $text-shadow;
+      color: $text-color;
+      display: inline-block;
+      min-width: 140px;
+    }
+    div:nth-child(1) {
+      font-weight: bold;
+    }
+  }
+  .navbarMenu {
+    td {
+      border-top: 1px solid #f2f2f6;
+      height: (1-$ratio) * $navbarHeight;
+    }
+    text-align: center;
+    position: relative;
+    a {
+      display: inline-block;
+      margin: 0 1rem;
+      font-weight: bolder;
+      transition-property: background;
+      transition-duration: 0.2s;
+    }
+    a:hover {
+      background-color: rgba($color: $black-color, $alpha: 0.2);
+      cursor: pointer;
+    }
+  }
+  .navbarMenu.sticky {
+    background: linear-gradient(
+      to right,
+      $primary-color 2%,
+      lighten(saturate(adjust-hue($primary-color, 1), 35), 5) 82%
+    );
+    background: $primary-color;
+    display: table;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition-property: transform, opacity;
+    transition-duration: 0.2s;
+    opacity: 0;
+    border-bottom: 1px solid darken($primary-color, 1);
+    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.1), 0 3px 3px rgba(59, 64, 69, 0.1);
+    transform: translateY(-20px);
+    a {
+      color: $white-color;
+    }
+    td {
+      border: none;
+    }
+    .ui.placeholder,
+    .ui.placeholder .image.header:after,
+    .ui.placeholder .line,
+    .ui.placeholder .line:after,
+    .ui.placeholder > :before {
+      background-color: $primary-color !important;
+    }
+  }
+  .navbarMenu.sticky.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @media screen and (max-width: $medium) {
+    .navButton {
+      display: none;
+    }
+  }
+}

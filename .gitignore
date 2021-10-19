@@ -1,0 +1,6 @@
+.vscode
+data
+**node_modules
+fallback_server/static_files/w/bundles
+**.log
+**.DS_Store

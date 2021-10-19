@@ -1,0 +1,31 @@
+{
+  "name": "fallback_server",
+  "version": "1.0.0",
+  "description": "fallback server",
+  "main": "index.js",
+  "author": {
+    "name": "Zakaria Mansouri",
+    "email": "ZAQO.cs@outlook.com",
+    "url": "https://www.KenpaChi.net"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": "10",
+    "npm": "6",
+    "yarn": "1"
+  },
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.20.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "nodemon": "^1.19.0"
+  }
+}

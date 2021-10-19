@@ -1,0 +1,17 @@
+@import "../../../utils/common-style/variables";
+@import "../../../utils/common-style/animation";
+@import "../../../utils/common-style/nprogress";
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+tr,
+td,
+.grid,
+.row,
+.column {
+  margin: 0 !important;
+  padding: 0 !important;
+}

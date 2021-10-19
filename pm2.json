@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "proxy_server",
+      "cwd": "./fallback_server",
+      "script": "proxy.js"
+    },
+    {
+      "name": "fallback_server",
+      "cwd": "./fallback_server",
+      "script": "index.js",
+      "env": {
+        "PORT": 3002
+      }
+    },
+    {
+      "name": "api_server",
+      "cwd": "./api_server",
+      "script": "yarn start",
+      "env": {
+        "PORT": 3001
+      }
+    }
+  ]
+}

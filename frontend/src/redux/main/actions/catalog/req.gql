@@ -1,0 +1,13 @@
+{
+  glasses {
+    id
+    name
+    price
+    brand {
+      name
+    }
+    thumbnail {
+      url
+    }
+  }
+}

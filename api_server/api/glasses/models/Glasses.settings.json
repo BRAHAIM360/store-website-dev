@@ -1,0 +1,55 @@
+{
+  "connection": "default",
+  "collectionName": "glasses",
+  "info": {
+    "name": "glasses",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "images": {
+      "group": "images",
+      "repeatable": true,
+      "type": "group"
+    },
+    "code": {
+      "type": "string"
+    },
+    "brand": {
+      "model": "brand",
+      "via": "glasses"
+    },
+    "categories": {
+      "collection": "category",
+      "dominant": true,
+      "via": "glasses"
+    },
+    "shapes": {
+      "collection": "shape",
+      "dominant": true,
+      "via": "glasses"
+    },
+    "lenses": {
+      "collection": "lense",
+      "dominant": true,
+      "via": "glasses"
+    }
+  }
+}

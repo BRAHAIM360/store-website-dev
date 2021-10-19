@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "lense",
+  "info": {
+    "name": "lense",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "name_fr": {
+      "type": "string",
+      "required": true
+    },
+    "glasses": {
+      "collection": "glasses",
+      "via": "lenses"
+    }
+  }
+}

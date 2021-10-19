@@ -1,0 +1,13 @@
+@import "../../../../utils/common-style/variables";
+@import "../../../../utils/common-style/buttons";
+
+.go-top {
+  @extend .btn-hollow;
+  margin: 3rem auto;
+  font-size: large;
+  padding: 1rem;
+  border-radius: 50%;
+  .icon {
+    margin: 0;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "connection": "default",
+  "collectionName": "topic",
+  "info": {
+    "name": "topic",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "title_fr": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "required": true,
+      "type": "text"
+    },
+    "description_fr": {
+      "required": true,
+      "type": "text"
+    },
+    "actionText": {
+      "required": true,
+      "type": "string"
+    },
+    "actionText_fr": {
+      "required": true,
+      "type": "string"
+    },
+    "actionLink": {
+      "required": true,
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
